@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.18/css/uikit.min.css"/>
+    <title>Contact</title>
+</head>
+<body>
+<div class="uk-container">
+    <h1>Contact Us</h1>
+    <p>This is the contacts page.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="uk-margin">
+            <textarea class="uk-textarea" name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="uk-margin">
+            <button class="uk-button uk-button-default" type="submit">Send</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
